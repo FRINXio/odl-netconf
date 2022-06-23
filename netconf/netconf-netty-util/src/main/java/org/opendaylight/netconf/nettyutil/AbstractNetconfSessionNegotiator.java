@@ -282,7 +282,6 @@ public abstract class AbstractNetconfSessionNegotiator<P extends NetconfSessionP
     protected void negotiationFailed(final Throwable cause) {
         LOG.debug("Negotiation on channel {} failed", channel, cause);
         channel.close();
-        promise.setFailure(cause);
     }
 
     /**
